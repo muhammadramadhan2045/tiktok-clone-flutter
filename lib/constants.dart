@@ -4,11 +4,13 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controller/auth_controller.dart';
 
+import 'view/screen/add_video_screen.dart';
+
 //Navbar
 const pages = [
   Text('Home Screen'),
   Text('Search Screen'),
-  Text('Add Page Screen'),
+  AddVideoScreen(),
   Text('Pesan Screen'),
   Text('Profile Screen'),
 ];
