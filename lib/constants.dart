@@ -4,6 +4,15 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controller/auth_controller.dart';
 
+//Navbar
+const pages = [
+  Text('Home Screen'),
+  Text('Search Screen'),
+  Text('Add Page Screen'),
+  Text('Pesan Screen'),
+  Text('Profile Screen'),
+];
+
 // COLORS
 const backgroundColor = Colors.black;
 var buttonColor = Colors.red[400];
