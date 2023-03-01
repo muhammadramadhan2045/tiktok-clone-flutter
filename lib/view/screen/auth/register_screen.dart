@@ -51,9 +51,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   left: 80,
                   child: IconButton(
                     icon: const Icon(Icons.add_a_photo),
-                    onPressed: () {
-                      debugPrint('memilih gambar untuk profil');
-                    },
+                    onPressed: () => authController.pickImage(),
                   ),
                 )
               ],
@@ -86,6 +84,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 controller: _sandiController,
                 labelText: 'Kata Sandi',
                 icon: Icons.lock,
+                isObscure: true,
               ),
             ),
             const SizedBox(height: 25),
@@ -100,7 +99,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               child: InkWell(
                 onTap: () {
-                  debugPrint('login user');
+                  debugPrint('register user');
+                  authController.daftarUser(
+                    _nameController.text,
+                    _emailController.text,
+                    _sandiController.text,
+                    authController.profileFoto,
+                  );
                 },
                 child: const Center(
                   child: Text(

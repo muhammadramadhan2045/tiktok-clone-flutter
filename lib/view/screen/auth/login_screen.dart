@@ -55,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _sandiController,
                 labelText: 'Kata Sandi',
                 icon: Icons.lock,
+                isObscure: true,
               ),
             ),
             const SizedBox(height: 30),
@@ -68,9 +69,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               child: InkWell(
-                onTap: () {
-                  debugPrint('login user');
-                },
+                onTap: () => authController.loginUser(
+                  _emailController.text,
+                  _sandiController.text,
+                ),
                 child: const Center(
                   child: Text(
                     'Login',
