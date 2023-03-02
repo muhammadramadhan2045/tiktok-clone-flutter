@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tiktok_clone/controller/upload_video_controller.dart';
 import 'package:tiktok_clone/view/widget/text_input_field.dart';
 import 'package:video_player/video_player.dart';
 
@@ -18,6 +20,10 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
   late VideoPlayerController controller;
   TextEditingController captionController = TextEditingController();
   TextEditingController songController = TextEditingController();
+
+  UploadVideoController uploadVideoController =
+      Get.put(UploadVideoController());
+
   @override
   void initState() {
     // TODO: implement initState
@@ -87,7 +93,11 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                   height: 10,
                 ),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => uploadVideoController.uploadVideo(
+                          songController.text,
+                          captionController.text,
+                          widget.videoPath,
+                        ),
                     child: const Text(
                       'Bagikan!',
                       style: TextStyle(fontSize: 20, color: Colors.white),
