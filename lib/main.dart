@@ -10,6 +10,7 @@ void main() async {
   await Firebase.initializeApp().then((value) {
     Get.put(AuthController());
   });
+
   runApp(const MyApp());
 }
 

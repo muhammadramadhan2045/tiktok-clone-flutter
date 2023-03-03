@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controller/auth_controller.dart';
 
 import 'view/screen/add_video_screen.dart';
+import 'view/screen/video_screen.dart';
 
 //Navbar
-const pages = [
-  Text('Home Screen'),
+List pages = [
+  const VideoScreen(),
   Text('Search Screen'),
-  AddVideoScreen(),
+  const AddVideoScreen(),
   Text('Pesan Screen'),
   Text('Profile Screen'),
 ];
