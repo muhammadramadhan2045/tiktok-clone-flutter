@@ -14,7 +14,6 @@ class _CircleAnimationState extends State<CircleAnimation>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller = AnimationController(
       vsync: this,
@@ -28,7 +27,6 @@ class _CircleAnimationState extends State<CircleAnimation>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     controller.dispose();
   }

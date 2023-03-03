@@ -26,7 +26,6 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       controller = VideoPlayerController.file(widget.videoFile);

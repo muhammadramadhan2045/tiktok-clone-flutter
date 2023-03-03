@@ -10,10 +10,10 @@ import 'view/screen/video_screen.dart';
 //Navbar
 List pages = [
   const VideoScreen(),
-  Text('Search Screen'),
+  const Text('Search Screen'),
   const AddVideoScreen(),
-  Text('Pesan Screen'),
-  Text('Profile Screen'),
+  const Text('Pesan Screen'),
+  const Text('Profile Screen'),
 ];
 
 // COLORS

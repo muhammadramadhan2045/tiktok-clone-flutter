@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktok_clone/constants.dart';
 import 'package:tiktok_clone/controller/video_controller.dart';
+import 'package:tiktok_clone/view/screen/komen_screen.dart';
 import 'package:tiktok_clone/view/widget/circle_animation.dart';
 import 'package:tiktok_clone/view/widget/video_player_item.dart';
 
@@ -163,7 +164,7 @@ class _VideoScreenState extends State<VideoScreen> {
                                   children: [
                                     InkWell(
                                       onTap: () => videoController
-                                          .likeVideo('Video $index'),
+                                          .likeVideo(data.videoId),
                                       child: Icon(
                                         Icons.favorite,
                                         size: 40,
@@ -188,7 +189,11 @@ class _VideoScreenState extends State<VideoScreen> {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {},
+                                      onTap: () => Navigator.of(context)
+                                          .push(MaterialPageRoute(
+                                        builder: (context) =>
+                                            KomenScreen(id: data.videoId),
+                                      )),
                                       child: const Icon(
                                         Icons.comment,
                                         size: 40,
