@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controller/auth_controller.dart';
+import 'package:tiktok_clone/view/screen/profil_screen.dart';
+import 'package:tiktok_clone/view/screen/search_screen.dart';
 
 import 'view/screen/add_video_screen.dart';
 import 'view/screen/video_screen.dart';
@@ -10,10 +12,10 @@ import 'view/screen/video_screen.dart';
 //Navbar
 List pages = [
   const VideoScreen(),
-  const Text('Search Screen'),
+  const SearchScreen(),
   const AddVideoScreen(),
   const Text('Pesan Screen'),
-  const Text('Profile Screen'),
+  ProfilScreen(uid: authController.user.uid),
 ];
 
 // COLORS
