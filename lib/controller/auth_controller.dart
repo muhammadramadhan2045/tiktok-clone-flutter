@@ -102,4 +102,8 @@ class AuthController extends GetxController {
       Get.snackbar('Gagal Login Akun', e.toString());
     }
   }
+
+  void signOut() async {
+    await firebaseAuth.signOut();
+  }
 }
